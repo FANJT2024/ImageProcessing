@@ -1,0 +1,882 @@
+.container {
+    max-width: 1600px;
+    width: 1600px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 15px;
+}
+
+.btn {
+    min-width: 100px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    height: 31px;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+    color: #000;
+}
+
+.form-control:read-only {
+    background-color: #f8f9fa;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.form-check-label {
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+#infoDisplay {
+    resize: none;
+    font-family: monospace;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    flex: 1;
+    height: calc(100% - 40px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-select {
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .function-card {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+    
+    .btn {
+        min-width: 90px;
+        font-size: 0.8rem;
+    }
+    
+    .form-label.small {
+        font-size: 0.7rem;
+    }
+    
+    .input-group-text {
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .function-card {
+        padding: 8px;
+    }
+    
+    .btn {
+        min-width: 80px;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+/* 功能卡片样式 */
+.function-card {
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-left: 3px solid #3498db;
+    height: 100%;
+}
+
+.function-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    border-left-color: #2980b9;
+}
+
+.function-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* 间距调整 */
+.g-3 {
+    --bs-gutter-y: 1rem;
+}
+
+/* 确保四个卡片高度一致 */
+@media (min-width: 768px) {
+    .function-card {
+        min-height: 200px;
+    }
+} 
+
+/* 调整左右两栏的宽度比例 */
+@media (min-width: 768px) {
+    .main-content {
+        width: 1300px;
+        margin-right: 0px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .info-panel {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        flex: none;
+    }
+} 
+
+/* 信息显示区域样式 */
+.info-panel .card {
+    height: 100%;
+    font-size: 0.875rem;
+    width: 300px;
+    flex: none;
+}
+
+.info-panel textarea {
+    height: calc(100% - 50px);
+    font-size: 0.875rem;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+/* 颜色选择器样式 */
+.color-picker-container {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.color-picker-button {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 4px;
+    background: #fff;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+.sp-replacer {
+    width: 100%;
+    border: 1px solid #dee2e6 !important;
+    background: #fff !important;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.sp-preview {
+    width: calc(100% - 20px);
+    height: 30px;
+    border: 1px solid #dee2e6;
+    margin-right: 5px;
+}
+
+.sp-dd {
+    height: 30px;
+    line-height: 30px;
+    font-size: 10px;
+}
+
+.sp-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sp-picker-container {
+    border: none !important;
+}
+
+.sp-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.sp-cancel, .sp-choose {
+    flex: 1;
+    padding: 8px !important;
+    border-radius: 4px;
+    border: none !important;
+    text-align: center;
+    text-transform: none !important;
+    font-weight: normal !important;
+}
+
+.sp-choose {
+    background: #1a73e8 !important;
+    color: white !important;
+}
+
+.sp-cancel {
+    background: #f1f3f4 !important;
+    color: #3c4043 !important;
+}
+
+.sp-input {
+    border-radius: 4px !important;
+} 
+
+/* RGB和HEX输入框样式 */
+.color-inputs .form-control {
+    text-align: center;
+}
+
+.color-inputs .small {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.color-inputs input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.color-inputs input[type="number"]::-webkit-outer-spin-button,
+.color-inputs input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.color-inputs .input-group-text {
+    font-family: monospace;
+    padding: 0.375rem 0.5rem;
+} 
+
+/* RGB输入框样式 */
+.sp-rgb-custom {
+    padding: 4px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    margin-top: 10px;
+}
+
+.sp-rgb-row {
+    display: flex;
+    align-items: center;
+    margin: 4px 10px;
+}
+
+.sp-rgb-row.hex-row {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
+}
+
+.sp-rgb-row label {
+    width: 25px;
+    margin: 0;
+    font-weight: bold;
+    color: #495057;
+}
+
+.sp-hex-input {
+    width: calc(100% - 25px);
+    padding: 4px 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    text-align: left;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.sp-rgb-input {
+    width: 60px;
+    padding: 4px 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    text-align: center;
+    -moz-appearance: textfield;
+}
+
+.sp-rgb-input::-webkit-outer-spin-button,
+.sp-rgb-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+
+/* 颜色选择器自定义样式 */
+.sp-custom-inputs {
+    margin-bottom: 15px;
+}
+
+.sp-hex-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.sp-hex-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.sp-format-select {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+
+.sp-rgb-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sp-rgb-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sp-rgb-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.sp-rgb-row label {
+    flex: 1;
+    margin: 0;
+    color: #666;
+}
+
+/* 调色板样式 */
+.sp-palette {
+    max-width: none;
+}
+
+.sp-palette-container {
+    border: none !important;
+}
+
+/* 按钮样式 */
+.sp-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.sp-cancel, .sp-choose {
+    flex: 1;
+    padding: 8px !important;
+    border-radius: 4px;
+    border: none !important;
+    text-align: center;
+    text-transform: none !important;
+    font-weight: normal !important;
+}
+
+.sp-choose {
+    background: #1a73e8 !important;
+    color: white !important;
+}
+
+.sp-cancel {
+    background: #f1f3f4 !important;
+    color: #3c4043 !important;
+} 
+
+/* 修改文件选择对话框的按钮文字 */
+::-webkit-file-upload-button {
+    content: "选择";
+}
+
+/* 为了兼容不同浏览器 */
+::file-selector-button {
+    content: "选择";
+} 
+
+/* 调整表单元素的大小 */
+.form-control-sm, .input-group-sm > .form-control {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* 调整标签的间距 */
+.form-label {
+    margin-bottom: 0.25rem;
+}
+
+/* 调整复选框和单选框的间距 */
+.form-check {
+    margin-bottom: 0.25rem;
+}
+
+/* 调整行间距 */
+.row > * {
+    margin-bottom: 0.5rem;
+}
+
+/* 调整信息显示区域 */
+.info-panel .card {
+    height: 100%;
+    font-size: 0.875rem;
+}
+
+.info-panel textarea {
+    height: calc(100% - 50px);
+    font-size: 0.875rem;
+} 
+
+/* 调整按钮组中的按钮间距 */
+.btn.me-1 {
+    margin-right: 0.5rem !important;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    min-width: 120px;
+}
+
+/* 调整组合执行按钮的大小 */
+.function-card .btn-success,
+.function-card .btn-warning {
+    min-width: 120px;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        min-width: 90px;
+    }
+    .btn-success,
+    .function-card .btn-success,
+    .function-card .btn-warning {
+        min-width: 110px;
+    }
+} 
+
+/* 图标样式 */
+.bi {
+    margin-right: 0.25rem;
+    font-size: 1.1em;
+    vertical-align: -0.125em;
+}
+
+/* 标题图标 */
+h1 .bi {
+    font-size: 1.2em;
+    color: #3498db;
+}
+
+/* 按钮悬停效果增强 */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 复选框美化 */
+.form-check-input {
+    transition: all 0.2s ease;
+}
+
+.form-check-input:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+    transform: scale(1.1);
+}
+
+/* 输入框焦点效果增强 */
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    border-color: #3498db;
+} 
+
+/* 页面标题样式增强 */
+.page-title {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+}
+
+/* 卡片标题样式增强 */
+.card-title {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: #2c3e50;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, transparent);
+}
+
+/* 输入框组样式优化 */
+.input-group-sm {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.input-group-text {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    border-color: #dee2e6;
+    color: #495057;
+    font-weight: 500;
+}
+
+/* 信息显示区域样式优化 */
+#infoDisplay {
+    font-family: 'Consolas', monospace;
+    line-height: 1.6;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background: #f8f9fa;
+    color: #2c3e50;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 表单标签样式优化 */
+.form-label.small {
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+}
+
+/* 单选框和复选框容器样式 */
+.form-check {
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 颜色选择器优化 */
+input[type="color"] {
+    height: 38px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+/* 下拉选择框样式优化 */
+.form-select {
+    background-image: linear-gradient(45deg, transparent 50%, #6c757d 50%),
+                      linear-gradient(135deg, #6c757d 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+                        calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px,
+                    5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* 禁用状态样式优化 */
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #f8f9fa;
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.function-card {
+    animation: fadeIn 0.3s ease-out;
+} 
+
+/* 确保每行的卡片高度一致 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 调整功能卡片的间距 */
+.row.g-3 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+@media (max-width: 1600px) {
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .main-content {
+        width: calc(100% - 310px);
+    }
+    
+    .info-panel {
+        width: 300px;
+        flex: none;
+        min-width: 300px;
+    }
+} 
+
+/* 调整卡片布局 */
+.card.mb-3 {
+    margin-bottom: 0 !important;
+}
+
+/* 调整行布局 */
+.row {
+    align-items: stretch;
+}
+
+/* 调整容器布��� */
+.container {
+    max-width: 1600px;
+    width: 1600px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 0;
+} 
+
+/* 调整按钮在窄屏下的布局 */
+@media (max-width: 1400px) {
+    .btn {
+        padding: 0.25rem 0.35rem;
+        min-width: 90px;
+    }
+    
+    .function-card .btn-success,
+    .function-card .btn-warning {
+        min-width: 110px;
+    }
+} 
+
+/* 恢复内部元素的字体大小 */
+.main-content,
+.info-panel {
+    font-size: 1rem;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.875rem;
+}
+
+.footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-social a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.footer-social a:hover {
+    color: #3498db;
+    transform: translateY(-2px);
+}
+
+.footer-social .bi {
+    font-size: 1.2rem;
+}
+
+.footer-social .bi-heart-fill {
+    font-size: 0.8rem;
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
